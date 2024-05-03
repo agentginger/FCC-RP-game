@@ -18,9 +18,29 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 
+// initialize buttons
+button1.onclick = goStore;
+button2.onclick = goCave;
+button3.onclick = fightDragon;
+
+function goTown() {
+  console.log("Going to town.")
+  button1.innerText = "Go to store"
+  button2.innerText = "Go to cave"
+  button3.innerText = "Fight dragon"
+  button1.onclick = goStore;
+  button2.onclick = goCave;
+  button3.onclick = fightDragon;
+};
+
 function goStore() {
   console.log("Going to store.")
-  button1.innerText = "buy 10 health (10 gold)"
+  button1.innerText = "Buy 10 health (10 gold)"
+  button2.innerText = "Buy weapon (30 gold)"
+  button3.innerText = "Go town square"
+  button1.onclick = buyHealth;
+  button2.onclick = buyWeapon;
+  button3.onclick = goTown;
 };
 
 function goCave() {
@@ -31,10 +51,11 @@ function fightDragon() {
   console.log("Fighting Dragon.")
 }
 
-// initialize buttons
+function buyHealth() {
 
+};
 
-button1.onclick = goStore;
-button2.onclick = goCave;
-button3.onclick = fightDragon;
+function buyWeapon() {
+
+};
 
